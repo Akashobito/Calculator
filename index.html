@@ -61,7 +61,7 @@
         ">6
         </button>
   
-        <button style="margin-left: 5px; padding: 15px  22px;" class="operator" onclick="
+        <button  class="operator" onclick="
           updateNumber('-');
         ">-
         </button>
@@ -84,7 +84,7 @@
         ">9
         </button>
   
-        <button style="margin-left: 5px; padding: 15px  22px;" class="operator" onclick="
+        <button class="operator" onclick="
           updateNumber('*');
         ">*
         </button>
@@ -106,7 +106,7 @@
         ">%
         </button>
   
-        <button style="margin-left: 5px; padding: 15px  22px;" class="operator" onclick="
+        <button class="operator" onclick="
           updateNumber('/');
         ">/
         </button>
@@ -115,7 +115,7 @@
         </p>
   
         <p>
-          <button class="number-button"  style="padding: 15px 59px; margin-right: 8px;" onclick="
+          <button class="number-button"  style="width: 226px;" onclick="
             calculation = '';
             localStorage.setItem('number',calculation);
             document.querySelector('.numberOutput').innerHTML = '';
@@ -126,7 +126,7 @@
             eval(calculation);
             calculation = eval(calculation);
             if(calculation === undefined){
-              document.querySelector('.numberOutput').innerHTML = 'Invalid-Input';
+              document.querySelector('.numberOutput').innerHTML = '';
             }else{
               document.querySelector('.numberOutput').innerHTML = calculation;
     

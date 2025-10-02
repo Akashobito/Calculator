@@ -3,6 +3,8 @@
         background-color: black;
       }
       button {
+        width: 70px;
+        height: 80px;
         font-family: arial;
         border: none;
         color: rgb(255, 255, 255);
@@ -10,6 +12,7 @@
         padding: 15px  20px;
         border-radius: 200px;
         margin: 0px 2px;
+        cursor: pointer;
       }
       .number-button {
         background-color: rgb(49, 47, 47);
@@ -83,6 +86,7 @@
           position: relative;
           margin: 150px 0px 10px 0px;
           color: white;
+          margin-left: 15px;
         }
         .numberOutput {
           font-size: 18px;
