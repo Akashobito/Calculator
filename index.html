@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+     
+  </head>
+
+  <body>
+
+    <div class="main">
+
+      <div class="output-div">
+        <p class="empty" style="color: white">
+         Enter Number
+        </p>
+      
+        <p class="numberOutput" style="color: white">
+         
+        </p>
+      </div>
+
+      <p>
+  
+      <button class="number-button" onclick="
+        updateNumber('1');
+      ">1
+      </button>
+      
+      <button class="number-button" onclick="
+        updateNumber('2');
+      ">2
+      </button>
+  
+      <button class="number-button" onclick="
+        updateNumber('3');
+      ">3
+      </button>
+  
+      <button class="operator" onclick="
+        updateNumber(' + ');
+      ">+
+      </button>
+      </p>
+      
+  
+      <p>
+        <button class="number-button" onclick="
+          updateNumber('4');
+        ">4
+        </button>
+  
+        <button class="number-button" onclick="
+          updateNumber('5');
+        ">5
+        </button>
+  
+        <button class="number-button" onclick="
+          updateNumber('6');
+        ">6
+        </button>
+  
+        <button style="margin-left: 5px; padding: 15px  22px;" class="operator" onclick="
+          updateNumber('-');
+        ">-
+        </button>
+  
+      </p>
+  
+      <p>
+          <button class="number-button" onclick="
+         updateNumber('7');
+        ">7
+        </button>
+  
+        <button class="number-button" onclick="
+          updateNumber('8');
+        ">8
+        </button>
+  
+        <button class="number-button" onclick="
+         updateNumber('9');
+        ">9
+        </button>
+  
+        <button style="margin-left: 5px; padding: 15px  22px;" class="operator" onclick="
+          updateNumber('*');
+        ">*
+        </button>
+      </p>
+      
+      <p>
+        <button class="number-button" style="padding: 15px 23px;" onclick="
+         updateNumber(' . ');
+        ">.
+        </button>
+  
+        <button class="number-button" onclick="
+          updateNumber('0');
+        ">0
+        </button>
+  
+        <button class="number-button"  style="padding: 15px 17px;" onclick="
+          updateNumber('/100');
+        ">%
+        </button>
+  
+        <button style="margin-left: 5px; padding: 15px  22px;" class="operator" onclick="
+          updateNumber('/');
+        ">/
+        </button>
+  
+  
+        </p>
+  
+        <p>
+          <button class="number-button"  style="padding: 15px 59px; margin-right: 8px;" onclick="
+            calculation = '';
+            localStorage.setItem('number',calculation);
+            document.querySelector('.numberOutput').innerHTML = '';
+            document.querySelector('.empty').classList.remove('empty-disable');
+          ">clear</button>
+    
+          <button style="background-color: red" class="operator" onclick="
+            eval(calculation);
+            calculation = eval(calculation);
+            if(calculation === undefined){
+              document.querySelector('.numberOutput').innerHTML = 'Invalid-Input';
+            }else{
+              document.querySelector('.numberOutput').innerHTML = calculation;
+    
+              localStorage.setItem('number',calculation);
+            }
+           
+            // for mobile view alert(calculation);
+          ">=
+          </button>
+  
+        </p>
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
